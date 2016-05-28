@@ -9,6 +9,8 @@ install:
   - cmd: git submodule -q update --init          
   - cmd: nuget restore
   - cmd: msbuild FluentSharp.NUnit.sln
+  - cmd: cd ../../
+  - cmd: dir
 
 build:
   project: FluentSharp.CoreLib.sln

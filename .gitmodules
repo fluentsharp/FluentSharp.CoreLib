@@ -1,0 +1,3 @@
+[submodule "lib/FluentSharp.NUnit"]
+	path = lib/FluentSharp.NUnit
+	url = git@github.com:o2platform/FluentSharp.NUnit.git

@@ -3,7 +3,11 @@ version: 6.0.1.{build}
 install:
   - cmd: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - cmd: git submodule -q update --init          
-
+  - cmd: cd lib\FluentSharp.NUnit
+  - cmd: dir
+  - cmd: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - cmd: git submodule -q update --init          
+  - cmd: msbuild FluentSharp.NUnit.sln
 
 build:
   project: FluentSharp.CoreLib.sln

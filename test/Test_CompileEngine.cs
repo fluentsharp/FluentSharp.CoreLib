@@ -5,7 +5,7 @@ using FluentSharp.NUnit;
 using NUnit.Framework;
 using FluentSharp.CoreLib;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Tests
 {
     [TestFixture]
     public class Test_CompileEngine : NUnitTests

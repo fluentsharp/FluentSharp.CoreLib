@@ -97,13 +97,13 @@
   </Target>
   -->
   <ItemGroup>
-    <ProjectReference Include="..\..\FluentSharp.CoreLib\FluentSharp.CoreLib.csproj">
+    <ProjectReference Include="..\lib\FluentSharp.NUnit\src\FluentSharp.NUnit.csproj">
+      <Project>{0da6b6b3-5be3-4610-bb7b-ea9a4baf27af}</Project>
+      <Name>FluentSharp.NUnit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\FluentSharp.CoreLib.csproj">
       <Project>{0A7CE0E0-B092-43B5-AB80-99BA909019C9}</Project>
       <Name>FluentSharp.CoreLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\FluentSharp.NUnit\FluentSharp.NUnit.csproj">
-      <Project>{0DA6B6B3-5BE3-4610-BB7B-EA9A4BAF27AF}</Project>
-      <Name>FluentSharp.NUnit</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

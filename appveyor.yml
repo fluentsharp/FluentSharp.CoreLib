@@ -7,6 +7,7 @@ install:
   - cmd: dir
   - cmd: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - cmd: git submodule -q update --init          
+  - cmd: nuget restore
   - cmd: msbuild FluentSharp.NUnit.sln
 
 build:

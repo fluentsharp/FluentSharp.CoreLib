@@ -8,3 +8,4 @@ UpgradeLog.xml
 *.pidb
 *.userprefs
 *.nupkg
+*.ncrunchproject

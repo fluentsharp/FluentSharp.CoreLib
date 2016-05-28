@@ -54,7 +54,7 @@ namespace FluentSharp.CoreLib
 		public static string compileToExtension(this string sourceFile, string targetExtension, string mainClass, string targetFolder)
 		{
 			var name = sourceFile.fileName_WithoutExtension();
-			return name.compileToExtension(targetExtension, mainClass, sourceFile.parentFolder(), targetFolder);			
+			return name.compileToExtension(targetExtension, mainClass, sourceFile.parent_Folder(), targetFolder);			
 		}
 		
 		public static string compileToExtension(this string name, string extension,string mainClass, string currentFolder, string targetFolder)
@@ -110,7 +110,7 @@ namespace FluentSharp.CoreLib
 					else
 					{
 						//if (onlyCopyReferencesInO2ExecutionDir.isFalse() || 
-						//	location.parentFolder() == PublicDI.config.CurrentExecutableDirectory)
+						//	location.parent_Folder() == PublicDI.config.CurrentExecutableDirectory)
 						//{							
 						var targetFileName = location.fileName();
 						if (targetFileName.isAssemblyName())

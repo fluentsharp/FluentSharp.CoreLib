@@ -60,7 +60,7 @@ namespace FluentSharp.CoreLib.APIs
 		{
 			var installMessage   = nuGet.execute("install " + packageName);
             var installedPackage = nuGet.extract_Installed_PackageName(installMessage);            
-            return nuGet.NuGet_Exe.parentFolder().mapPath(installedPackage);
+            return nuGet.NuGet_Exe.parent_Folder().mapPath(installedPackage);
 		}
         public static string extract_Installed_PackageName(this API_NuGet nuGet, string installMessage)
         {

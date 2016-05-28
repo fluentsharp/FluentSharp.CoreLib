@@ -86,7 +86,7 @@ namespace FluentSharp.CoreLib.API
                 {
                     PublicDI.log.info("Setting CurrentScript to:: {0}", value);
                     _currentScript = value;
-                    CurrentScriptFolder = value.parentFolder();
+                    CurrentScriptFolder = value.parent_Folder();
                 }
             }
         }

@@ -7,7 +7,7 @@ using System.IO;
 using System.Reflection;
 using System.Security.AccessControl;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Tests
 {
     [TestFixture]
     public class Test_IO_ExtensionMethods_Folders : NUnitTests
@@ -44,7 +44,7 @@ namespace UnitTests.FluentSharp.CoreLib
         }
 
         [Test]
-        public void parentFolder()
+        public void parent_Folder()
         {
             var childFolder = temporaryFolderPath.path_Combine("an_child").folder_Create();
             childFolder.parent_Folder().assert_Is_Not_Null();
@@ -56,18 +56,18 @@ namespace UnitTests.FluentSharp.CoreLib
         }
 
         [Test]
-        public void parentFolder_Open_in_Explorer()
+        public void parent_Folder_Open_in_Explorer()
         {
             var tmpDir = "_open_In_explorer".tempDir();
-            tmpDir.parentFolder_Open_in_Explorer().assert_Is_Not_Null();
+            tmpDir.parent_Folder_Open_in_Explorer().assert_Is_Not_Null();
             var windowTitle = tmpDir.parent_Folder().folderName();
             windowTitle.error();
             var window = windowTitle.win32_Desktop_Window_With_Title();            
             window.assert_Not_Default()
                   .win32_CloseWindow().assert_True();
             
-            "".parentFolder_Open_in_Explorer().assert_Is_Null();
-            (null as string).parentFolder_Open_in_Explorer().assert_Is_Null();
+            "".parent_Folder_Open_in_Explorer().assert_Is_Null();
+            (null as string).parent_Folder_Open_in_Explorer().assert_Is_Null();
             10.randomLetters().win32_Desktop_Window_With_Title().assert_Is_Default();
         }
 
@@ -75,9 +75,9 @@ namespace UnitTests.FluentSharp.CoreLib
         public void folder()
         {
             temporaryFolderPath.folder("".add_5_RandomLetters()).assert_Is_Null();
-            var parentFolder = temporaryFolderPath.parent_Folder();
+            var parent_Folder = temporaryFolderPath.parent_Folder();
             var folderName = temporaryFolderPath.folderName();
-            parentFolder.folder(folderName).assert_Is_Equal_To(temporaryFolderPath);
+            parent_Folder.folder(folderName).assert_Is_Equal_To(temporaryFolderPath);
             (null as string).folder(folderName).assert_Is_Null();
         }
 

@@ -37,7 +37,7 @@ namespace FluentSharp.CoreLib
             if (fileToCopy.fileExists().isFalse())
                 "[file_CopyFileToFolder] fileToCopy doesn't exist: {0}".error(fileToCopy);
             else
-                if (targetFolderOrFile.dirExists() ||  targetFolderOrFile.parentFolder().dirExists())
+                if (targetFolderOrFile.dirExists() ||  targetFolderOrFile.parent_Folder().dirExists())
                     return Files.copy(fileToCopy,targetFolderOrFile);
                 else
                     "[file_CopyFileToFolder]..targetFolder or its parent doesn't exist: {0}".error(targetFolderOrFile);					

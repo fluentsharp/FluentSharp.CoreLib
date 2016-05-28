@@ -1,13 +1,8 @@
-﻿using FluentSharp.CoreLib;
-using FluentSharp.CoreLib.API;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Reflection;
-using System.Text;
-using FluentSharp.CoreLib;
 
-namespace UnitTests.FluentSharp.CoreLib
+
+namespace FluentSharp.CoreLib.Tests
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class UnitTestMethodReferenceAttribute : Attribute

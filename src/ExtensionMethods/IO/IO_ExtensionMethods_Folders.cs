@@ -42,7 +42,7 @@ namespace FluentSharp.CoreLib
         /// <param name="path"></param>
         /// Input is validated using <code>path.valid()</code> function
         /// <returns></returns>
-        [Obsolete("parentFolder is deprecated.Please use parent_Folder instead")]
+        [Obsolete("parent_Folder is deprecated.Please use parent_Folder instead")]
         public static string parentFolder(this string path)
         {
             return path.parent_Folder();
@@ -51,13 +51,13 @@ namespace FluentSharp.CoreLib
         /// Given a file path or directory path opens the parent folder in windows explorer
         /// </summary>
         /// <param name="path"></param>
-        /// Input parameters is validated using <code>path.parentFolder().folder_Exists()</code>
+        /// Input parameters is validated using <code>path.parent_Folder().folder_Exists()</code>
         /// <returns></returns>
-        public static Process       parentFolder_Open_in_Explorer(this string path)
+        public static Process       parent_Folder_Open_in_Explorer(this string path)
         {
-            var parentFolder = path.parent_Folder();
-            if(parentFolder.folder_Exists())
-                return parentFolder.startProcess();
+            var parent_Folder = path.parent_Folder();
+            if(parent_Folder.folder_Exists())
+                return parent_Folder.startProcess();
             return null;
         }
         /// <summary>

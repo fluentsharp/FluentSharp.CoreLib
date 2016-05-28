@@ -198,7 +198,7 @@ namespace FluentSharp.CoreLib
         {
             try
             {
-                return Assembly.GetExecutingAssembly().location().parentFolder().pathCombine(path);
+                return Assembly.GetExecutingAssembly().location().parent_Folder().pathCombine(path);
             }
             catch (Exception ex)
             {
@@ -308,14 +308,14 @@ namespace FluentSharp.CoreLib
             }
             return null;
         }		
-        public static string        findParentFolderCalled(this string fullPath, string folderToFind)
+        public static string        findparent_FolderCalled(this string fullPath, string folderToFind)
         {
-            var parentFolder = fullPath.directoryName();
-            if (folderToFind.valid() && parentFolder.notNull())
+            var parent_Folder = fullPath.directoryName();
+            if (folderToFind.valid() && parent_Folder.notNull())
             {
-                if (parentFolder.fileName() == folderToFind)
-                    return parentFolder;
-                return findParentFolderCalled(parentFolder,folderToFind);
+                if (parent_Folder.fileName() == folderToFind)
+                    return parent_Folder;
+                return findparent_FolderCalled(parent_Folder,folderToFind);
             }
             return null;
         }

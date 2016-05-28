@@ -698,7 +698,7 @@ namespace FluentSharp.CoreLib.API
                 if (outputAssemblyName == "")
                     outputAssemblyName = PublicDI.config.TempFileNameInTempDirectory;
                 
-                if (!outputAssemblyName.parentFolder().dirExists())
+                if (!outputAssemblyName.parent_Folder().dirExists())
                     outputAssemblyName = Path.Combine(PublicDI.config.O2TempDir, outputAssemblyName);
                 if (bVerbose)
                     PublicDI.log.debug("Dynamically compiling Source code...");                
@@ -825,9 +825,9 @@ namespace FluentSharp.CoreLib.API
 
                 var extraFoldersToFindFile = CompileEngine.LocalFoldersToSearchForCodeFiles.toList()
                                                           .add(Environment.CurrentDirectory)
-                                                          .add(Assembly.GetExecutingAssembly().location().parentFolder())
-                                                          .add(Assembly.GetCallingAssembly().location().parentFolder())
-                                                          .add(Assembly.GetEntryAssembly().location().parentFolder())
+                                                          .add(Assembly.GetExecutingAssembly().location().parent_Folder())
+                                                          .add(Assembly.GetCallingAssembly().location().parent_Folder())
+                                                          .add(Assembly.GetEntryAssembly().location().parent_Folder())
                                                           .add(PublicDI.config.ToolsOrApis)
                                                           .onlyValidFolders()
                                                           .unique();

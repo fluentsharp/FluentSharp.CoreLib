@@ -2,3 +2,7 @@ version: 1.0.{build}
 build:
   project: FluentSharp.CoreLib.sln
   verbosity: minimal
+
+artifacts:
+  - path: test.zip
+    name: MyApp

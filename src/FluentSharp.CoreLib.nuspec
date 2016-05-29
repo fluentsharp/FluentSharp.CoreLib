@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>FluentSharp.CoreLib</id>
-        <version>6.0.1.0</version>
+        <version>$version$</version>
         <title>FluentSharp - CoreLib</title>
         <authors>O2 Platform</authors>
         <owners>O2 Platform</owners>
         <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-        <projectUrl>http://o2platform.wordpress.com</projectUrl>
+        <projectUrl>https://github.com/fluentsharp/FluentSharp</projectUrl>
         <iconUrl>https://www.owasp.org/images/f/f5/O2_Logo_no_Shadow.jpg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>FluentSharp is an API that dramatically simplifies the use of .NET Framework APIs. As an example, the reflection wrapper is probably one of the most powerful .NET Reflection APIs, since it provides (via user-friendly methods) full access to all .NET classes, methods, properties, fields and enums (regardless of their public/private status).</description>
@@ -26,5 +26,8 @@
 				<frameworkAssemblies>
 					<frameworkAssembly assemblyName="System.Drawing" targetFramework="" />
 				</frameworkAssemblies>
-    </metadata>    
+      </metadata>  
+      <files>
+        <file src=".\bin\Release\FluentSharp.CoreLib.dll" target="lib\net35\FluentSharp.CoreLib.dll" />
+      </files>  
 </package>

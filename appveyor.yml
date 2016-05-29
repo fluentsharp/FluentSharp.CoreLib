@@ -28,3 +28,6 @@ assembly_info:
 
 after_test:
   - nuget pack src/FluentSharp.CoreLib.nuspec
+
+artifacts:
+  - path: '*.nupkg' 

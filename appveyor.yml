@@ -1,8 +1,6 @@
 version: 6.0.1.{build}
 
 install:
-  - cmd: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-  - cmd: git submodule -q update --init          
   - cmd: cd lib\FluentSharp.NUnit
   - cmd: dir
   - cmd: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
@@ -12,12 +10,13 @@ install:
   - cmd: cd ../../
   - cmd: dir
 
+  - cmd: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - cmd: git submodule -q update --init          
+
+
+before_build:
+  - nuget restore
+
 build:
   project: FluentSharp.CoreLib.sln
   verbosity: minimal
-  publish_nuget: true
-  publish_nuget_symbols: true
-
-artifacts:
-  - path: test.zip
-    name: MyApp

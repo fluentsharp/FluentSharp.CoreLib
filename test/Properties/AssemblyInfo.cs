@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using FluentSharp.CoreLib.API;
 
-[assembly: AssemblyTitle("UnitTests.FluentSharp.CoreLib")]
-[assembly: AssemblyProduct("UnitTests.FluentSharp.CoreLib")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyTitle("FluentSharp.CoreLib.Tests")]
+[assembly: AssemblyProduct("FluentSharp.CoreLib.Tests")]
+[assembly: AssemblyVersion("6.0.1.0")]
+[assembly: AssemblyFileVersion("6.0.1.0")]
 
 //FLuentSharp attributes
 [assembly: SkipTempPathLengthVerification]

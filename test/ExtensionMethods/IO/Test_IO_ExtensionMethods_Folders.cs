@@ -15,7 +15,7 @@ namespace FluentSharp.CoreLib.Tests
         public string tempDir;
         public string temporaryFolderPath = null;          
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Initialize()
         {
             if (clr.mono())
@@ -24,7 +24,7 @@ namespace FluentSharp.CoreLib.Tests
             tempDir = PublicDI.config.O2TempDir;
             temporaryFolderPath = "_test_folders_".temp_Dir();            
         }
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Files.delete_Folder_Recursively(temporaryFolderPath);

@@ -13,7 +13,7 @@ namespace UnitTests.FluentSharp.CoreLib
     [TestFixture]
     public class Test_IO_ExtensionMethods_DirectoryInfo
     {
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void setup()
 		{
 			if (clr.mono())		

@@ -10,13 +10,13 @@ namespace UnitTests.FluentSharp_CoreLib.APIs
     public class Test_API_NuGet
     {
         API_NuGet apiNuGet;
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void FixtureSetup()
         {
             apiNuGet = new API_NuGet();                
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void FixtureTearDown()
         {
             

@@ -120,7 +120,7 @@ namespace UnitTests.FluentSharp_CoreLib.ExtensionMethods
     
         [Test] public void jsDate()
         {
-            var now     = DateTime.Now;
+            var now     = DateTime.Now.ToUniversalTime();  // we need to use ToUniversalTime since that is the value used inside jsDate
             var jsDate  = now     .jsDate();
             var date    = jsDate  .fromJsDate();
             var jsDate2 = date    .jsDate();            // round trip test

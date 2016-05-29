@@ -99,8 +99,12 @@ namespace FluentSharp.CoreLib
 		public static long      unixTime_Now     (this int secondsToAdd)        
 		{
 			return DateTime.UtcNow.unixTime().add(secondsToAdd);
-		}				
-    
+		}
+        /// <summary>
+        /// Returns the data in miliseconds using ToUniversalTime
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static string  jsDate(this DateTime date)
         {
             return date.toJsDate();

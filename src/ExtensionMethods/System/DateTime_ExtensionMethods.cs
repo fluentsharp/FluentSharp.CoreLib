@@ -113,7 +113,7 @@ namespace FluentSharp.CoreLib
         {
             if (date == default(DateTime))
                 return String.Empty;
-            var dateTime_1970       = new DateTime(1970, 1, 1);
+            var dateTime_1970       = new DateTime(1970, 1, 1).ToUniversalTime();
             var dateTime_Universal  = date.ToUniversalTime();
             var timeSpan            = new TimeSpan(dateTime_Universal.Ticks - dateTime_1970.Ticks);
             return timeSpan.TotalMilliseconds.ToString("#");

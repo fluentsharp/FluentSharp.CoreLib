@@ -65,11 +65,11 @@ namespace UnitTests.FluentSharp_CoreLib.APIs
             
             var nuGet = new API_NuGet();
 
-            Console.WriteLine("-------");
-            Console.WriteLine(nuGet.list("FluentSharp").asString());
-            Console.WriteLine("-------");
-            Console.WriteLine(nuGet.packages_FluentSharp().asString());
-            Console.WriteLine("-------");
+            //Console.WriteLine("-------");
+            //Console.WriteLine(nuGet.list("FluentSharp").asString());
+            //Console.WriteLine("-------");
+            //Console.WriteLine(nuGet.packages_FluentSharp().asString());
+            //Console.WriteLine("-------");
 
             nuGet.list("FluentSharp").assert_Not_Empty()                                     
                                      .assert_Equal_To(nuGet.packages_FluentSharp());

@@ -64,7 +64,7 @@ namespace UnitTests.FluentSharp_CoreLib.APIs
             var nuGet = new API_NuGet();
             
             nuGet.list("FluentSharp").asString().debug();
-            nuGet.packages_FluentSharp().asString()().error();
+            nuGet.packages_FluentSharp().asString().error();
             nuGet.list("FluentSharp").assert_Not_Empty()
                                      .assert_Size_Is(29) 
                                      .assert_Equal_To(nuGet.packages_FluentSharp());

@@ -27,7 +27,7 @@ assembly_info:
   assembly_informational_version: "{version}"
 
 before_test:
-  - nuget pack src/FluentSharp.CoreLib.nuspec -Version %appveyor_build_version% 
+  - nuget pack src/FluentSharp.CoreLib.csproj -Version %appveyor_build_version% 
 
 artifacts:
   - path: '*.nupkg' 

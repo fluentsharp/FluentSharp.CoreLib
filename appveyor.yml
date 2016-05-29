@@ -31,3 +31,7 @@ before_test:
 
 artifacts:
   - path: '*.nupkg' 
+
+deploy:
+  provider: NuGet  
+  artifact: '*.nupkg' 

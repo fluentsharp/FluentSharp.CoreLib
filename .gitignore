@@ -11,3 +11,4 @@ UpgradeLog.xml
 *.nupkg
 *.ncrunchsolution
 *.ncrunchproject
+*.cache

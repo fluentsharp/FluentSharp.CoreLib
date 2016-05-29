@@ -1,19 +1,18 @@
-﻿using System.Text;
-using FluentSharp.CoreLib.API;
+﻿using FluentSharp.CoreLib.API;
 using NUnit.Framework;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [SetUpFixture]
     public class Tests_Setup
     {
-        [SetUp]
+        [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
             O2ConfigSettings.CheckForTempDirMaxSizeCheck = false;
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void RunAfterAnyTests()
         {
             O2ConfigSettings.CheckForTempDirMaxSizeCheck = true;

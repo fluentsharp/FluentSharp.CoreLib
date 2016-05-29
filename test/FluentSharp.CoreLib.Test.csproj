@@ -8,8 +8,8 @@
     <ProjectGuid>{2D70DDE6-EC9B-4B69-8BD3-BCCC7FA4F165}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentSharp_CoreLib.Tests</RootNamespace>
-    <AssemblyName>FluentSharp.CoreLib.Tests</AssemblyName>
+    <RootNamespace>FluentSharp_CoreLib.Test</RootNamespace>
+    <AssemblyName>FluentSharp.CoreLib.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

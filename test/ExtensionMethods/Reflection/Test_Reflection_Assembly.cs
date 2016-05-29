@@ -1,13 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.API;
 using FluentSharp.NUnit;
 using NUnit.Framework;
 using UnitTests.FluentSharp_CoreLib;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [TestFixture]
     public class Test_Reflection_Assembly : NUnitTests
@@ -82,7 +81,7 @@ namespace UnitTests.FluentSharp.CoreLib
         {
             var assembly1 = this.type().assembly();
             var assembly2 = typeof(string).assembly();
-            var expected1 = "UnitTests.FluentSharp.CoreLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null";
+            var expected1 = "FluentSharp.CoreLib.Test, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null";
             var expected2 = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
             Assert.AreEqual(assembly1.fullName(),expected1);
             Assert.AreEqual(assembly2.fullName(),expected2);
@@ -94,12 +93,12 @@ namespace UnitTests.FluentSharp.CoreLib
             var originalString  = "aaaa".add_RandomLetters(10);
             var assembly        = Assembly.GetExecutingAssembly();
             var version         = assembly.version();
-            var expected        = originalString + "1.0.0.0";
+            var expected        = originalString + "6.0.1.0";
             var result          = originalString.append_Version_Calling_Assembly();
 
-            assert_Are_Equal(result, expected);
-            assert_Are_Equal(result, originalString + version);
-            assert_Are_Equal((null as string).append_Version_Calling_Assembly(), version);
+            result.assert_Is(expected);
+            result.assert_Is(originalString + version);
+            (null as string).append_Version_Calling_Assembly().assert_Is(version);
         }
 
         [Test(Description = "Appends to provided string the Assembly version from FluentSharp.CoreLib, in format x.x.x.x (Major.MajorRevision.Minor.MinorRevision)")]
@@ -130,7 +129,7 @@ namespace UnitTests.FluentSharp.CoreLib
         public void version()
         {
             var currentAssembly = Assembly.GetExecutingAssembly();            
-            assert_Are_Equal(currentAssembly   .version(), "1.0.0.0");
+            assert_Are_Equal(currentAssembly   .version(), "6.0.1.0");
             assert_Are_Equal((null as Assembly).version(), "");
         }
 
@@ -138,7 +137,7 @@ namespace UnitTests.FluentSharp.CoreLib
         public void version_Short()
         {
             var currentAssembly = Assembly.GetExecutingAssembly();            
-            assert_Are_Equal(currentAssembly   .version_Short(), "1.0");
+            assert_Are_Equal(currentAssembly   .version_Short(), "6.0");
             assert_Are_Equal((null as Assembly).version_Short(), "");
         }
   

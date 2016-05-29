@@ -1,9 +1,7 @@
-﻿
-using System;
-using FluentSharp.CoreLib;
+﻿using System;
 using NUnit.Framework;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [TestFixture]
     public class Test_Char

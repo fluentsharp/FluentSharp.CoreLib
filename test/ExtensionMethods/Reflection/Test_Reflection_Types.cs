@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.API;
 using FluentSharp.NUnit;
 using NUnit.Framework;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     public class Test_Reflection_Types : NUnitTests
     {

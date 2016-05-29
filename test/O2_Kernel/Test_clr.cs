@@ -1,10 +1,9 @@
 ﻿using System;
 using NUnit.Framework;
 using FluentSharp.NUnit;
-using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.API;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
 	[TestFixture]
 	public class Test_clr

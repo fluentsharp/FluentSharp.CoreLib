@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentSharp.CoreLib;
+﻿using System.Text;
 using FluentSharp.CoreLib.API;
 using NUnit.Framework;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [TestFixture]
     public class Test_Reflection_ExtensionMethods_Ctor

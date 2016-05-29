@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.API;
 using FluentSharp.NUnit;
 using NUnit.Framework;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [TestFixture]
     public class Test_Reflection_ExtensionMethods_Invoke : NUnitTests

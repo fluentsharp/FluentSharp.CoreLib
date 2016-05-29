@@ -1,8 +1,7 @@
 ﻿using System.Security.Cryptography;
 using NUnit.Framework;
-using FluentSharp.CoreLib;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [TestFixture]
     class Test_Crypto

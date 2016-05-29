@@ -5,9 +5,15 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSharp.CoreLib", "src\FluentSharp.CoreLib.csproj", "{0A7CE0E0-B092-43B5-AB80-99BA909019C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSharp.CoreLib.Tests", "test\FluentSharp.CoreLib.Tests.csproj", "{2D70DDE6-EC9B-4B69-8BD3-BCCC7FA4F165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSharp.CoreLib.Test", "test\FluentSharp.CoreLib.Test.csproj", "{2D70DDE6-EC9B-4B69-8BD3-BCCC7FA4F165}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSharp.NUnit", "lib\FluentSharp.NUnit\src\FluentSharp.NUnit.csproj", "{0DA6B6B3-5BE3-4610-BB7B-EA9A4BAF27AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{68F35CA8-0E0A-4F4A-BD62-CAE188B48729}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{555A1022-B997-421A-AB26-D0268336C326}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{96E55196-C490-432A-8706-05124523B593}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +36,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A7CE0E0-B092-43B5-AB80-99BA909019C9} = {555A1022-B997-421A-AB26-D0268336C326}
+		{2D70DDE6-EC9B-4B69-8BD3-BCCC7FA4F165} = {96E55196-C490-432A-8706-05124523B593}
+		{0DA6B6B3-5BE3-4610-BB7B-EA9A4BAF27AF} = {68F35CA8-0E0A-4F4A-BD62-CAE188B48729}
 	EndGlobalSection
 EndGlobal

@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using FluentSharp.CoreLib;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using FluentSharp.CoreLib.API;
 using FluentSharp.NUnit;
 
-namespace UnitTests.FluentSharp.CoreLib
+namespace FluentSharp.CoreLib.Test
 {
     [TestFixture]
     public class Test_IO_ExtensionMethods_DirectoryInfo

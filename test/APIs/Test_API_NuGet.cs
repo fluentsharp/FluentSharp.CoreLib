@@ -64,7 +64,13 @@ namespace UnitTests.FluentSharp_CoreLib.APIs
 				"Same prob as help() method".assert_Ignore ();
             
             var nuGet = new API_NuGet();
-                       
+
+            Console.WriteLine("-------");
+            Console.WriteLine(nuGet.list("FluentSharp"));
+            Console.WriteLine("-------");
+            Console.WriteLine(nuGet.packages_FluentSharp());
+            Console.WriteLine("-------");
+
             nuGet.list("FluentSharp").assert_Not_Empty()                                     
                                      .assert_Equal_To(nuGet.packages_FluentSharp());
         }

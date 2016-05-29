@@ -28,6 +28,6 @@
 				</frameworkAssemblies>
       </metadata>  
       <files>
-        <file src=".\bin\Release\FluentSharp.CoreLib.dll" target="lib\net35\FluentSharp.CoreLib.dll" />
+        <file src=".\bin\Debug\FluentSharp.CoreLib.dll" target="lib\net35\FluentSharp.CoreLib.dll" />
       </files>  
 </package>

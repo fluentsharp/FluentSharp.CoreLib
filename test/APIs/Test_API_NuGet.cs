@@ -62,23 +62,10 @@ namespace UnitTests.FluentSharp_CoreLib.APIs
         {
 			if (clr.mono ())
 				"Same prob as help() method".assert_Ignore ();
-
-            var nuGet = new API_NuGet();
             
-            nuGet.list("FluentSharp").asString().debug();
-            nuGet.packages_FluentSharp().asString().error();
-
-            Console.WriteLine("--------------------------");
-            Console.WriteLine(nuGet.list("FluentSharp").asString());
-            Console.WriteLine("--------------------------");
-            Console.WriteLine(nuGet.packages_FluentSharp().asString());
-            Console.WriteLine("1)--------------------------");
-            nuGet.packages_FluentSharp().removeEmpty().assert_Size_Is(29);
-            Console.WriteLine("2)--------------------------");
-            nuGet.list("FluentSharp").assert_Size_Is(29);
-            Console.WriteLine("3)--------------------------");
-            nuGet.list("FluentSharp").assert_Not_Empty()
-                                     .assert_Size_Is(29) 
+            var nuGet = new API_NuGet();
+                       
+            nuGet.list("FluentSharp").assert_Not_Empty()                                     
                                      .assert_Equal_To(nuGet.packages_FluentSharp());
         }
         [Test] public void install()

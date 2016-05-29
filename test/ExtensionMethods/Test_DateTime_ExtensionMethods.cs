@@ -126,12 +126,6 @@ namespace UnitTests.FluentSharp_CoreLib.ExtensionMethods
             var jsDate2 = date    .jsDate();            // round trip test
             var date2   = jsDate2 .fromJsDate();
 
-            Console.WriteLine(now);
-            Console.WriteLine(jsDate);
-            Console.WriteLine(date);
-            Console.WriteLine(jsDate2);
-            Console.WriteLine(date2);
-
             Assert.NotNull (jsDate);            
             Assert.AreEqual(jsDate   , jsDate2);
             Assert.AreEqual(date     , date2);

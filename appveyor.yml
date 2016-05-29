@@ -17,3 +17,14 @@ before_build:
 build:
   project: FluentSharp.CoreLib.sln
   verbosity: minimal
+
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+after_test:
+  - nuget pack src/FluentSharp.CoreLib.nuspec

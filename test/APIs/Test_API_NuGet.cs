@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using FluentSharp.CoreLib;
 using FluentSharp.CoreLib.APIs;
 using FluentSharp.NUnit;
@@ -67,11 +68,11 @@ namespace UnitTests.FluentSharp_CoreLib.APIs
             nuGet.list("FluentSharp").asString().debug();
             nuGet.packages_FluentSharp().asString().error();
 
-            Debug.WriteLine("--------------------------");
-            Debug.WriteLine(nuGet.list("FluentSharp").asString());
-            Debug.WriteLine("--------------------------");
-            Debug.WriteLine(nuGet.packages_FluentSharp().asString());
-            Debug.WriteLine("--------------------------");
+            Console.WriteLine("--------------------------");
+            Console.WriteLine(nuGet.list("FluentSharp").asString());
+            Console.WriteLine("--------------------------");
+            Console.WriteLine(nuGet.packages_FluentSharp().asString());
+            Console.WriteLine("--------------------------");
             nuGet.list("FluentSharp").assert_Not_Empty()
                                      .assert_Size_Is(29) 
                                      .assert_Equal_To(nuGet.packages_FluentSharp());

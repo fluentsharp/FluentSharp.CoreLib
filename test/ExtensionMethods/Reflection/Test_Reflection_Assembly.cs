@@ -81,10 +81,10 @@ namespace FluentSharp.CoreLib.Test
         {
             var assembly1 = this.type().assembly();
             var assembly2 = typeof(string).assembly();
-            var expected1 = "FluentSharp.CoreLib.Test, Version=6.0.1.0, Culture=neutral, PublicKeyToken=null";
+            var expected1 = "FluentSharp.CoreLib.Test, Version=6.0.1.";
             var expected2 = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
-            Assert.AreEqual(assembly1.fullName(),expected1);
-            Assert.AreEqual(assembly2.fullName(),expected2);
+            assembly1.fullName().assert_Contains(expected1);
+            assembly2.fullName().assert_Is(expected2);
         }
     
         [Test(Description = "Appends to provided string the Assembly version from from GetCallingAssembly, in format x.x.x.x (Major.MajorRevision.Minor.MinorRevision)")]
@@ -93,10 +93,10 @@ namespace FluentSharp.CoreLib.Test
             var originalString  = "aaaa".add_RandomLetters(10);
             var assembly        = Assembly.GetExecutingAssembly();
             var version         = assembly.version();
-            var expected        = originalString + "6.0.1.0";
+            var expected        = originalString + "6.0.1.";
             var result          = originalString.append_Version_Calling_Assembly();
 
-            result.assert_Is(expected);
+            result.assert_Contains(expected);
             result.assert_Is(originalString + version);
             (null as string).append_Version_Calling_Assembly().assert_Is(version);
         }
@@ -129,8 +129,8 @@ namespace FluentSharp.CoreLib.Test
         public void version()
         {
             var currentAssembly = Assembly.GetExecutingAssembly();            
-            assert_Are_Equal(currentAssembly   .version(), "6.0.1.0");
-            assert_Are_Equal((null as Assembly).version(), "");
+            currentAssembly   .version().assert_Contains("6.0.1.");
+            (null as Assembly).version().assert_Is("");
         }
 
         [Test(Description = "returns the version number of the provided assembly in format x.x.x.x (Major.MajorRevision")]

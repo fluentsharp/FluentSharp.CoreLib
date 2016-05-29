@@ -14,7 +14,8 @@ namespace UnitTests.FluentSharp_CoreLib
     {
         public string TempFile1 { get; set; }
         public string TempFile2 { get; set; }
-        [SetUp]
+
+        [OneTimeSetUp]
         public void setup()
         {
             TempFile1 = "tempFile".tempFile();
@@ -25,7 +26,7 @@ namespace UnitTests.FluentSharp_CoreLib
 
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void tearDown()
         {
             TempFile1.file_Delete();

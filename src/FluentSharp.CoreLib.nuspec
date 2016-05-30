@@ -29,5 +29,6 @@
       </metadata>  
       <files>
         <file src=".\bin\Debug\FluentSharp.CoreLib.dll" target=".\lib\net35\FluentSharp.CoreLib.dll" />
+        <file src=".\bin\Debug\FluentSharp.CoreLib.dll" target=".\lib\dotnet\FluentSharp.CoreLib.dll" />
       </files>  
 </package>
